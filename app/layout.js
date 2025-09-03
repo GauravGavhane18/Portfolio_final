@@ -7,12 +7,16 @@ import ScrollToTop from "./components/helper/scroll-to-top";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio of Abu Said - Software Developer",
+  title: "Portfolio of Gaurav Gavhane - Software Developer",
   description:
-    "This is the portfolio of Abu Said. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "This is the portfolio of Gaurav Gavhane. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+  icons: {
+    icon: "/favicon.ico", // ✅ favicon setup
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -26,8 +30,9 @@ export default function RootLayout({ children }) {
           <ScrollToTop />
         </main>
         <Footer />
+        {/* ✅ Google Tag Manager */}
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
