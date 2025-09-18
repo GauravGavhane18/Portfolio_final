@@ -16,5 +16,23 @@ export const experiences = [
     title: "Design Team Lead",
     company: "Mathematics Club, JSPM RSCOE",
     duration: "(2023 - Present)"
+  },
+  {
+    id: 4,
+    title: "Hackathon Participant",
+    company: "Techneeti, JSPM",
+    duration: "(2024)"
+  },
+  {
+    id: 5,
+    title: "Event Participant",
+    company: "COEP Mindspark",
+    duration: "(2024)"
+  },
+  {
+    id: 6,
+    title: "College Event Participant",
+    company: "Various College Events",
+    duration: "(2023 - 2024)"
   }
 ];

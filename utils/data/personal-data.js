@@ -1,7 +1,7 @@
 export const personalData = {
   name: "GAURAV GAVHANE",
   profile: '/myphoto.jpg',
-  designation: "Software Developer",
+  designation: "Aspiring Full Stack Developer",
   description: "My name is Gaurav Gavhane. I am a passionate and enthusiastic programmer with a strong self-learning attitude. I love exploring new technologies and solving challenging problems. I specialize in web application development, especially using the MERN stack (MongoDB, Express.js, React, Node.js), and enjoy building dynamic, user-friendly, and scalable web applications. JavaScript is my core strength, and I like leveraging it to create innovative solutions. I am open to opportunities where I can contribute, learn, and grow as a developer.",
   email: 'gavhanegs18@gmail.com',
   phone: '+7218603915',
