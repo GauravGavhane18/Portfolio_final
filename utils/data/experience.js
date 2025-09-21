@@ -23,16 +23,4 @@ export const experiences = [
     company: "Techneeti, JSPM",
     duration: "(2024)"
   },
-  {
-    id: 5,
-    title: "Event Participant",
-    company: "COEP Mindspark",
-    duration: "(2024)"
-  },
-  {
-    id: 6,
-    title: "College Event Participant",
-    company: "Various College Events",
-    duration: "(2023 - 2024)"
-  }
 ];
