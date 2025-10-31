@@ -53,7 +53,7 @@ const WelcomeAlert = () => {
                 🎉 Welcome to My Portfolio!
               </h3>
               <p className="text-gray-300 text-sm">
-                Explore my journey as a Full Stack Developer. Let's build something amazing together! ✨
+                Explore my journey as a Full Stack Developer. Let&apos;s build something amazing together! ✨
               </p>
             </div>
           </div>
