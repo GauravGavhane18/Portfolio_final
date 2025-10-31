@@ -71,15 +71,33 @@ export async function POST(request) {
   try {
     const payload = await request.json();
     const { name, email, message: userMessage } = payload;
+
+    // Validate input data
+    if (!name || !email || !userMessage) {
+      return NextResponse.json({
+        success: false,
+        message: 'Name, email, and message are required.',
+      }, { status: 400 });
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({
+        success: false,
+        message: 'Please provide a valid email address.',
+      }, { status: 400 });
+    }
+
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chat_id = process.env.TELEGRAM_CHAT_ID;
 
     // Validate environment variables
-    if (!token || !chat_id) {
+    if (!token || !chat_id || !process.env.EMAIL_ADDRESS || !process.env.GMAIL_PASSKEY) {
       return NextResponse.json({
         success: false,
-        message: 'Telegram token or chat ID is missing.',
-      }, { status: 400 });
+        message: 'Server configuration error. Please try again later.',
+      }, { status: 500 });
     }
 
     const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
@@ -93,13 +111,18 @@ export async function POST(request) {
     if (telegramSuccess && emailSuccess) {
       return NextResponse.json({
         success: true,
-        message: 'Message and email sent successfully!',
+        message: 'Message sent successfully! I will get back to you soon.',
+      }, { status: 200 });
+    } else if (telegramSuccess || emailSuccess) {
+      return NextResponse.json({
+        success: true,
+        message: 'Message sent successfully via one channel. I will get back to you soon.',
       }, { status: 200 });
     }
 
     return NextResponse.json({
       success: false,
-      message: 'Failed to send message or email.',
+      message: 'Failed to send message. Please try again or contact me directly.',
     }, { status: 500 });
   } catch (error) {
     console.error('API Error:', error.message);

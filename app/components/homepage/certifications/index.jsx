@@ -45,7 +45,12 @@ function Certifications() {
               {
                 certifications.map(certification => (
                   <GlowCard key={certification.id} identifier={`certification-${certification.id}`}>
-                    <div className="p-3 relative text-white">
+                    <a
+                      href={certification.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-3 relative text-white hover:bg-[#1a1443]/20 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
+                    >
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -59,7 +64,7 @@ function Certifications() {
                         </p>
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                        <div className="text-violet-500 transition-all duration-300 hover:scale-125">
                           <BsAward size={36} />
                         </div>
                         <div className="flex-1">
@@ -70,7 +75,7 @@ function Certifications() {
                           <p className="text-xs text-[#16f2b3] mb-3">
                             ID: {certification.credentialId}
                           </p>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-2 mb-3">
                             {certification.skills.map((skill, index) => (
                               <span
                                 key={index}
@@ -80,19 +85,13 @@ function Certifications() {
                               </span>
                             ))}
                           </div>
-                          {certification.credentialUrl && (
-                            <a
-                              href={certification.credentialUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block mt-3 text-[#16f2b3] text-sm hover:underline"
-                            >
-                              View Certificate →
-                            </a>
-                          )}
+                          <div className="flex items-center text-[#16f2b3] text-sm group-hover:text-white transition-colors duration-300">
+                            <span>View Certificate</span>
+                            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </GlowCard>
                 ))
               }

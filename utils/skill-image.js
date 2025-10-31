@@ -83,178 +83,93 @@ import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
 
-
+const skillImageMap = {
+  'gcp': gcp,
+  'html': html,
+  'photoshop': photoshop,
+  'docker': docker,
+  'illustrator': illustrator,
+  'adobe xd': adobeXd,
+  'after effects': afterEffects,
+  'css': css,
+  'angular': angular,
+  'javascript': javascript,
+  'next js': nextJS,
+  'nuxt js': nuxtJS,
+  'react': react,
+  'svelte': svelte,
+  'typescript': typescript,
+  'vue': vue,
+  'bootstrap': bootstrap,
+  'bulma': bulma,
+  'capacitorjs': capacitorjs,
+  'coffeescript': coffeescript,
+  'memsql': memsql,
+  'mongodb': mongoDB,
+  'mysql': mysql,
+  'postgresql': postgresql,
+  'tailwind': tailwind,
+  'vitejs': vitejs,
+  'vuetifyjs': vuetifyjs,
+  'c': c,
+  'c++': cplusplus,
+  'c#': csharp,
+  'dart': dart,
+  'go': go,
+  'java': java,
+  'kotlin': kotlin,
+  'julia': julia,
+  'matlab': matlab,
+  'php': php,
+  'prisma': prisma,
+  'python': python,
+  'ruby': ruby,
+  'swift': swift,
+  'adobe audition': adobeaudition,
+  'aws': aws,
+  'deno': deno,
+  'django': django,
+  'firebase': firebase,
+  'gimp': gimp,
+  'git': git,
+  'graphql': graphql,
+  'lightroom': lightroom,
+  'materialui': materialui,
+  'nginx': nginx,
+  'numpy': numpy,
+  'opencv': opencv,
+  'premiere pro': premierepro,
+  'pytorch': pytorch,
+  'selenium': selenium,
+  'strapi': strapi,
+  'tensorflow': tensorflow,
+  'webix': webix,
+  'wordpress': wordpress,
+  'azure': azure,
+  'blender': blender,
+  'fastify': fastify,
+  'figma': figma,
+  'flutter': flutter,
+  'haxe': haxe,
+  'ionic': ionic,
+  'markdown': markdown,
+  'microsoft office': microsoftoffice,
+  'picsart': picsart,
+  'sketch': sketch,
+  'unity': unity,
+  'wolframalpha': wolframalpha,
+  'canva': canva,
+  'pandas': pandas,
+  'sklearn': scikitlearn,
+  '.net': dotnet,
+  '.net core': dotnetcore,
+  'kubernetes': kubernetes,
+  'linux': linux,
+  'sqlalchemy': sqlalchemy,
+  'fastapi': fastapi,
+};
 
 export const skillsImage = (skill) => {
-  const skillID = skill.toLowerCase();
-  switch (skillID) {
-    case 'gcp':
-      return gcp;
-    case 'html':
-      return html;
-    case 'photoshop':
-      return photoshop;
-    case 'docker':
-      return docker;
-    case 'illustrator':
-      return illustrator;
-    case 'adobe xd':
-      return adobeXd;
-    case 'after effects':
-      return afterEffects;
-    case 'css':
-      return css;
-    case 'angular':
-      return angular;
-    case 'javascript':
-      return javascript;
-    case 'next js':
-      return nextJS;
-    case 'nuxt js':
-      return nuxtJS;
-    case 'react':
-      return react;
-    case 'svelte':
-      return svelte;
-    case 'typescript':
-      return typescript;
-    case 'vue':
-      return vue;
-    case 'bootstrap':
-      return bootstrap;
-    case 'bulma':
-      return bulma;
-    case 'capacitorjs':
-      return capacitorjs;
-    case 'coffeescript':
-      return coffeescript;
-    case 'memsql':
-      return memsql;
-    case 'mongodb':
-      return mongoDB;
-    case 'mysql':
-      return mysql;
-    case 'postgresql':
-      return postgresql;
-    case 'tailwind':
-      return tailwind;
-    case 'vitejs':
-      return vitejs;
-    case 'vuetifyjs':
-      return vuetifyjs;
-    case 'c':
-      return c;
-    case 'c++':
-      return cplusplus;
-    case 'c#':
-      return csharp;
-    case 'dart':
-      return dart;
-    case 'go':
-      return go;
-    case 'java':
-      return java;
-    case 'kotlin':
-      return kotlin;
-    case 'julia':
-      return julia;
-    case 'matlab':
-      return matlab;
-    case 'php':
-      return php;
-    case 'prisma':
-      return prisma;
-    case 'python':
-      return python;
-    case 'ruby':
-      return ruby;
-    case 'swift':
-      return swift;
-    case 'adobe audition':
-      return adobeaudition;
-    case 'aws':
-      return aws;
-    case 'deno':
-      return deno;
-    case 'django':
-      return django;
-    case 'firebase':
-      return firebase;
-    case 'gimp':
-      return gimp;
-    case 'git':
-      return git;
-    case 'graphql':
-      return graphql;
-    case 'lightroom':
-      return lightroom;
-    case 'materialui':
-      return materialui;
-    case 'nginx':
-      return nginx;
-    case 'numpy':
-      return numpy;
-    case 'opencv':
-      return opencv;
-    case 'premiere pro':
-      return premierepro;
-    case 'pytorch':
-      return pytorch;
-    case 'selenium':
-      return selenium;
-    case 'strapi':
-      return strapi;
-    case 'tensorflow':
-      return tensorflow;
-    case 'webix':
-      return webix;
-    case 'wordpress':
-      return wordpress;
-    case 'azure':
-      return azure;
-    case 'blender':
-      return blender;
-    case 'fastify':
-      return fastify;
-    case 'figma':
-      return figma;
-    case 'flutter':
-      return flutter;
-    case 'haxe':
-      return haxe;
-    case 'ionic':
-      return ionic;
-    case 'markdown':
-      return markdown;
-    case 'microsoft office':
-      return microsoftoffice;
-    case 'picsart':
-      return picsart;
-    case 'sketch':
-      return sketch;
-    case 'unity':
-      return unity;
-    case 'wolframalpha':
-      return wolframalpha;
-    case 'canva':
-      return canva;
-    case 'pandas':
-      return pandas;
-    case 'sklearn':
-      return scikitlearn;
-    case '.net':
-      return dotnet;
-    case '.net core':
-      return dotnetcore
-    case 'kubernetes':
-      return kubernetes;
-    case 'linux':
-      return linux;
-    case 'sqlalchemy':
-      return sqlalchemy;
-    case 'fastapi':
-      return fastapi;
-    default:
-      break;
-  }
-}
+  const s = skill.toLowerCase();
+  return skillImageMap[s];
+};

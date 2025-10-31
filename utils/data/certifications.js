@@ -5,12 +5,12 @@
  */
 
 // Portfolio PDF configuration
-export const portfolioConfig = {
-  pdfPath: "/Gaurav_Gavhane_36_portfolio.pdf",
-  downloadName: "Gaurav_Gavhane_Portfolio.pdf",
-  title: "Professional Portfolio",
-  description: "Complete portfolio showcasing projects, skills, and experience"
-};
+// export const portfolioConfig = {
+//   pdfPath: "/Gaurav_Gavhane_36_portfolio.pdf",
+//   downloadName: "Gaurav_Gavhane_Portfolio.pdf",
+//   title: "Professional Portfolio",
+//   description: "Complete portfolio showcasing projects, skills, and experience"
+// };
 
 // Enhanced certifications data with better structure and validation
 export const certifications = [
@@ -23,7 +23,7 @@ export const certifications = [
     issueDate: "2024-03-15",
     expiryDate: null,
     credentialId: "BCGX-2024-001",
-    credentialUrl: "https://www.bcg.com/certificates/verify",
+    credentialUrl: "https://drive.google.com/drive/folders/1R5cpASH1puLbenSAg-5McTK_cxP4p_Jl",
     verificationCode: "BCGX-2024-001",
     skills: ["Business Strategy", "Consulting", "Problem Solving", "Analytics"],
     category: "Business",
@@ -35,15 +35,15 @@ export const certifications = [
   },
   {
     id: 2,
-    title: "Data Analytics Professional Certificate",
+    title: "Deloitte Professional Certificate",
     issuer: "Deloitte",
     issuerLogo: "https://logos-world.net/wp-content/uploads/2020/09/Deloitte-Logo.png",
     duration: "2024",
     issueDate: "2024-02-20",
     expiryDate: "2025-02-20",
-    credentialId: "DELOITTE-DA-2024-002",
-    credentialUrl: "https://www2.deloitte.com/verify/certificate",
-    verificationCode: "DELOITTE-DA-2024-002",
+    credentialId: "DELOITTE-2024-002",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279/details/certifications/1750503114915/single-media-viewer/?type=DOCUMENT&profileId=ACoAAEPrdxYBUuvkyluwLqmx3tAaVA80dQrmU9s",
+    verificationCode: "DELOITTE-2024-002",
     skills: ["Data Analytics", "Business Intelligence", "Data Visualization", "SQL", "Python"],
     category: "Data Science",
     level: "Professional",
@@ -61,7 +61,7 @@ export const certifications = [
     issueDate: "2024-01-10",
     expiryDate: null,
     credentialId: "IBM-SKILL-2024-003",
-    credentialUrl: "https://www.ibm.com/skills/certificate-verify",
+    credentialUrl: "https://skills.yourlearning.ibm.com/credential/CREDLY-29bdaec3-af04-458e-a70e-2e6fa78c5dd5",
     verificationCode: "IBM-SKILL-2024-003",
     skills: ["Cloud Computing", "AI/ML", "Data Science", "IBM Cloud", "Watson"],
     category: "Technology",
@@ -80,7 +80,7 @@ export const certifications = [
     issueDate: "2024-04-05",
     expiryDate: null,
     credentialId: "APNA-DSA-2024-004",
-    credentialUrl: "https://apnacollege.in/certificates/verify",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
     verificationCode: "APNA-DSA-2024-004",
     skills: ["DSA", "Problem Solving", "Algorithms", "Data Structures", "C++", "Java"],
     category: "Programming",
@@ -99,7 +99,7 @@ export const certifications = [
     issueDate: "2024-03-01",
     expiryDate: null,
     credentialId: "IITB-CPP-2024-005",
-    credentialUrl: "https://www.iitb.ac.in/certificates/verify",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
     verificationCode: "IITB-CPP-2024-005",
     skills: ["C++", "Programming", "Object-Oriented Programming", "Memory Management", "STL"],
     category: "Programming",
@@ -111,41 +111,79 @@ export const certifications = [
   },
   {
     id: 6,
-    title: "Full Stack Web Development Bootcamp",
-    issuer: "Udemy",
-    issuerLogo: "https://logos-world.net/wp-content/uploads/2020/09/Udemy-Logo.png",
-    duration: "2024",
-    issueDate: "2024-02-15",
+    title: "Application Development in Java",
+    issuer: "Red Hat",
+    issuerLogo: "https://1000logos.net/wp-content/uploads/2021/11/Red-Hat-logo.png",
+    duration: "2023",
+    issueDate: "2023-11-15",
     expiryDate: null,
-    credentialId: "UC-12345678",
-    credentialUrl: "https://www.udemy.com/certificate/UC-12345678/",
-    verificationCode: "UC-12345678",
-    skills: ["React", "Node.js", "MongoDB", "Express.js", "JavaScript", "HTML", "CSS"],
-    category: "Web Development",
+    credentialId: "a4514253-859e-46f3-9ec2-54b69e4f7774",
+    credentialUrl: "https://www.credly.com/badges/a4514253-859e-46f3-9ec2-54b69e4f7774/linked_in_profile",
+    verificationCode: "a4514253-859e-46f3-9ec2-54b69e4f7774",
+    skills: ["Java", "Java EE", "Application Development", "Red Hat"],
+    category: "Programming",
     level: "Professional",
-    description: "Complete full-stack web development bootcamp covering modern technologies and best practices.",
-    imageUrl: "/certificates/udemy-fullstack.jpg",
+    description: "Certification in enterprise Java application development using Red Hat technologies.",
+    imageUrl: "/certificates/redhat-java.jpg",
     isVerified: true,
     priority: 6
   },
   {
     id: 7,
-    title: "JavaScript Algorithms and Data Structures",
-    issuer: "freeCodeCamp",
-    issuerLogo: "https://logos-world.net/wp-content/uploads/2020/09/FreeCodeCamp-Logo.png",
+    title: "Adobe India Women-in-Tech Hackathon",
+    issuer: "Adobe",
+    issuerLogo: "https://1000logos.net/wp-content/uploads/2016/10/Adobe-logo-500x281.png",
     duration: "2023",
-    issueDate: "2023-12-10",
+    issueDate: "2023-09-20",
     expiryDate: null,
-    credentialId: "JS-ALG-DS-2023-007",
-    credentialUrl: "https://freecodecamp.org/certification/fcc1234567890/javascript-algorithms-and-data-structures",
-    verificationCode: "JS-ALG-DS-2023-007",
-    skills: ["JavaScript", "Algorithms", "Data Structures", "ES6", "Functional Programming"],
-    category: "Programming",
+    credentialId: "7281833b-0400-464c-b4b4-a32bd44700eb",
+    credentialUrl: "https://unstop.com/certificate-preview/7281833b-0400-464c-b4b4-a32bd44700eb",
+    verificationCode: "7281833b-0400-464c-b4b4-a32bd44700eb",
+    skills: ["Hackathon", "Problem Solving", "Teamwork", "Innovation"],
+    category: "Competition",
     level: "Intermediate",
-    description: "JavaScript algorithms and data structures certification covering fundamental programming concepts and problem-solving.",
-    imageUrl: "/certificates/freecodecamp-js.jpg",
+    description: "Participation and achievement in the Adobe India Women-in-Technology Scholarship Hackathon.",
+    imageUrl: "/certificates/adobe-hackathon.jpg",
     isVerified: true,
     priority: 7
+  },
+  {
+    id: 8,
+    title: "Introduction to C++",
+    issuer: "CodeChef",
+    issuerLogo: "https://cdn.codechef.com/images/cc-logo.svg",
+    duration: "2023",
+    issueDate: "2023-08-10",
+    expiryDate: null,
+    credentialId: "CODECHEF-CPP-2023-008",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
+    verificationCode: "CODECHEF-CPP-2023-008",
+    skills: ["C++", "Programming", "Problem Solving", "Competitive Programming"],
+    category: "Programming",
+    level: "Beginner",
+    description: "Foundational course on C++ programming concepts provided by CodeChef learning platform.",
+    imageUrl: "/certificates/codechef-cpp.jpg",
+    isVerified: true,
+    priority: 8
+  },
+  {
+    id: 9,
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco Networking Academy",
+    issuerLogo: "https://1000logos.net/wp-content/uploads/2021/04/Cisco-logo.png",
+    duration: "2023",
+    issueDate: "2023-07-05",
+    expiryDate: null,
+    credentialId: "CISCO-CYBER-2023-009",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
+    verificationCode: "CISCO-CYBER-2023-009",
+    skills: ["Cybersecurity", "Networking", "Security Principles", "Threats"],
+    category: "Security",
+    level: "Intermediate",
+    description: "Introductory course on cybersecurity concepts, threats, and best practices from Cisco Networking Academy.",
+    imageUrl: "/certificates/cisco-cybersecurity.jpg",
+    isVerified: true,
+    priority: 9
   }
 ];
 
@@ -158,7 +196,7 @@ export const certificationUtils = {
    */
   validateCertification: (cert) => {
     const requiredFields = ['id', 'title', 'issuer', 'duration', 'credentialId', 'skills'];
-    return requiredFields.every(field => cert.hasOwnProperty(field) && cert[field]);
+    return requiredFields.every(field => Object.prototype.hasOwnProperty.call(cert, field) && cert[field]);
   },
 
   /**
@@ -208,4 +246,3 @@ export const certificationUtils = {
 
 // Export default certifications array for backward compatibility
 export default certifications;
-
