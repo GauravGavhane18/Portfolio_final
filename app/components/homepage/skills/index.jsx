@@ -47,13 +47,21 @@ function Skills() {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
                   <div className="h-8 sm:h-10">
-                    <Image
-                      src={skillsImage(skill)?.src}
-                      alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
-                    />
+                    {skillsImage(skill)?.src ? (
+                      <Image
+                        src={skillsImage(skill).src}
+                        alt={skill}
+                        width={40}
+                        height={40}
+                        className="h-full w-auto rounded-lg"
+                      />
+                    ) : (
+                      <div className="h-full w-10 bg-gradient-to-r from-pink-500 to-violet-600 rounded-lg flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">
+                          {skill.charAt(0).toUpperCase()}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <p className="text-white text-sm sm:text-lg">
                     {skill}

@@ -184,6 +184,25 @@ export const certifications = [
     imageUrl: "/certificates/cisco-cybersecurity.jpg",
     isVerified: true,
     priority: 9
+  },
+  {
+    id: 10,
+    title: "48 Hours SQL Course",
+    issuer: "Scalar",
+    issuerLogo: "https://scalar.com/logo.png",
+    duration: "2024",
+    issueDate: "2024-06-15",
+    expiryDate: null,
+    credentialId: "SCALAR-SQL-2024-010",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
+    verificationCode: "SCALAR-SQL-2024-010",
+    skills: ["SQL", "Database Management", "Data Querying", "Database Design"],
+    category: "Programming",
+    level: "Intermediate",
+    description: "Intensive 48-hour SQL course covering database fundamentals, advanced queries, and database management concepts.",
+    imageUrl: "/certificates/scalar-sql.jpg",
+    isVerified: true,
+    priority: 10
   }
 ];
 

@@ -20,8 +20,12 @@ function Navbar() {
               <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
             </Link>
           </li>
+
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div></Link>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#internships"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">INTERNSHIPS</div></Link>
+          </li>
+          <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#extracurricular"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ACTIVITIES</div></Link>
           </li>
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div></Link>
@@ -30,14 +34,15 @@ function Navbar() {
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EDUCATION</div></Link>
           </li>
           <li>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#designations"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ROLES</div></Link>
+          </li>
+          <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#certifications"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">CERTIFICATIONS</div></Link>
           </li>
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#goals"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">GOALS</div></Link>
           </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PORTFOLIO</div></Link>
-          </li>
+
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div></Link>
           </li>

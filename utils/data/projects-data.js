@@ -6,7 +6,7 @@ export const projectsData = [
         tools: ['MongoDB', 'Express', 'React', 'Node.js', 'Bootstrap', 'JWT'],
         role: 'Full Stack Developer',
         code: 'https://github.com/GauravGavhane18/doctor-appointment',
-        demo: '',
+        demo: null,
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ export const projectsData = [
         tools: ['Python', 'OpenAI API', 'Speech Recognition', 'Text-to-Speech', 'Flask', 'WebSocket'],
         role: 'AI Developer',
         code: 'https://github.com/GauravGavhane18/jarvis-chatbot',
-        demo: '',
+        demo: null,
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ export const projectsData = [
         tools: ['C++', 'Arduino', 'Embedded C', 'Sensors', 'Real-time Systems', 'Safety Protocols'],
         role: 'Embedded Systems Developer',
         code: 'https://github.com/GauravGavhane18/railway-braking-system',
-        demo: '',
+        demo: null,
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ export const projectsData = [
         tools: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API', 'JWT', 'Cloudinary', 'Redux'],
         role: 'Full Stack Developer',
         code: 'https://github.com/GauravGavhane18/ecommerce-platform',
-        demo: '',
+        demo: null,
     },
     {
         id: 7,
@@ -60,17 +60,9 @@ export const projectsData = [
         tools: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT', 'Multer', 'Tailwind CSS'],
         role: 'Full Stack Developer',
         code: 'https://github.com/GauravGavhane18/social-media-dashboard',
-        demo: '',
+        demo: null,
     },
-    {
-        id: 8,
-        name: 'Task Management System',
-        description: 'A collaborative task management application similar to Trello/Asana. Features include project creation, task assignment, progress tracking, team collaboration, file attachments, deadline management, and productivity analytics. Built with drag-and-drop functionality and real-time updates.',
-        tools: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Socket.io', 'JWT', 'Drag & Drop API', 'Chart.js'],
-        role: 'Full Stack Developer',
-        code: 'https://github.com/GauravGavhane18/task-management-system',
-        demo: '',
-    }
+
 ];
 
 

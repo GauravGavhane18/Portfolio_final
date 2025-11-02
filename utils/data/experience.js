@@ -1,47 +1,29 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Web Development Intern',
-    company: "CodeSoft",
-    duration: "(June 2024 - July 2024)"
+    title: 'Full Stack Developer',
+    company: "Freelance",
+    duration: "(2023 - Present)",
+    description: "Working as a freelance full-stack developer, creating custom web applications for various clients. Specializing in MERN stack development with focus on responsive design and user experience. Successfully delivered 10+ projects ranging from e-commerce platforms to portfolio websites.",
+    skills: ["React", "Node.js", "MongoDB", "Express.js", "JavaScript", "HTML/CSS"],
+    location: "Remote"
   },
   {
     id: 2,
-    title: "Java Development Intern",
-    company: "Cognifyz Technologies",
-    duration: "(May 2024 - June 2024)"
+    title: "Open Source Contributor",
+    company: "Various Projects",
+    duration: "(2023 - Present)",
+    description: "Actively contributing to open-source projects on GitHub. Focused on web development libraries and tools. Contributed bug fixes, feature enhancements, and documentation improvements to multiple repositories.",
+    skills: ["Git", "GitHub", "Open Source", "Code Review", "Documentation"],
+    location: "Remote"
   },
   {
     id: 3,
-    title: "Cybersecurity Virtual Intern",
-    company: "Deloitte (Forage)",
-    duration: "(May 2024)"
-  },
-  {
-    id: 4,
-    title: "Technical Team Member",
-    company: "PDC (Professional Development Cell), JSPM RSCOE",
-    duration: "(2024 - Present)"
-  },
-  {
-
-    id: 5,
-    title: "TPC Coordinator",
-    company: "Training and Placement Cell, JSPM RSCOE",
-    duration: "(2024 - Present)"
-  },
-  {
-
-    id: 6,
-    title: "Design Team Lead",
-    company: "Mathematics Club, JSPM RSCOE",
-    duration: "(2023 - Present)"
-  },
-  {
-    id: 7,
-    title: "Hackathon Participant",
-    company: "Techneeti, JSPM",
-    duration: "(2024)"
-  },
-  
+    title: "Technical Content Creator",
+    company: "Personal Blog & Social Media",
+    duration: "(2023 - Present)",
+    description: "Creating technical content about web development, programming tutorials, and technology trends. Sharing knowledge through blog posts, social media content, and code examples. Building a community of fellow developers and learners.",
+    skills: ["Technical Writing", "Content Creation", "Social Media", "Community Building"],
+    location: "Remote"
+  }
 ];
