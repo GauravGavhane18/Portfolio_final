@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: rgb(211, 216, 232);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0d1224;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme styles */
+:global(.light) body {
+  background-color: #f8fafc;
+  color: #1a202c;
+}
+
+:global(.light) .text-white {
+  color: #1a202c !important;
+}
+
+:global(.light) .text-gray-300 {
+  color: #4a5568 !important;
+}
+
+:global(.light) [class*="bg-[#1a1443]"] {
+  background-color: #2d3748 !important;
+}
+
+:global(.light) [class*="border-[#1b2c68a0]"] {
+  border-color: #cbd5e0 !important;
+}
+
+:global(.light) [class*="from-[#0d1224]"] {
+  background: linear-gradient(to right, #f1f5f9, #e2e8f0) !important;
+}
+
+/* Dark theme (default) */
+:global(.dark) body {
+  background-color: #0d1224;
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+#sticky-card-1 {
+  --index: 1;
+}
+
+#sticky-card-2 {
+  --index: 2;
+}
+
+#sticky-card-3 {
+  --index: 3;
+}
+
+#sticky-card-4 {
+  --index: 4;
+}
+
+#sticky-card-5 {
+  --index: 5;
+}
+
+#sticky-card-6 {
+  --index: 6;
+}
+
+#sticky-card-7 {
+  --index: 7;
+}
+
+#sticky-card-8 {
+  --index: 8;
+}
+
+.sticky-card {
+  // padding-top: calc(var(--index) * 2.5rem);
+  top: calc(var(--index) * 4rem);
+}
