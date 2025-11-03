@@ -203,6 +203,44 @@ export const certifications = [
     imageUrl: "/certificates/scalar-sql.jpg",
     isVerified: true,
     priority: 10
+  },
+  {
+    id: 11,
+    title: "Deloitte Internship Certificate",
+    issuer: "Deloitte",
+    issuerLogo: "https://logos-world.net/wp-content/uploads/2020/09/Deloitte-Logo.png",
+    duration: "2024-2025",
+    issueDate: "2025-07-31",
+    expiryDate: null,
+    credentialId: "DELOITTE-INTERN-2025-011",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
+    verificationCode: "DELOITTE-INTERN-2025-011",
+    skills: ["Cybersecurity", "Virtual Internship", "Professional Development", "Industry Experience"],
+    category: "Internship",
+    level: "Professional",
+    description: "Certificate of completion for cybersecurity virtual internship program with Deloitte through Forage platform.",
+    imageUrl: "/certificates/deloitte-internship.jpg",
+    isVerified: true,
+    priority: 11
+  },
+  {
+    id: 12,
+    title: "CodeSoft Internship Certificate",
+    issuer: "CodeSoft",
+    issuerLogo: "https://codesoft.com/logo.png",
+    duration: "2024",
+    issueDate: "2024-12-31",
+    expiryDate: null,
+    credentialId: "CODESOFT-INTERN-2024-012",
+    credentialUrl: "https://www.linkedin.com/in/gaurav-gavhane-87274b279",
+    verificationCode: "CODESOFT-INTERN-2024-012",
+    skills: ["Web Development", "React", "JavaScript", "Frontend Development", "Internship"],
+    category: "Internship",
+    level: "Professional",
+    description: "Certificate of completion for web development internship focusing on React and modern frontend technologies.",
+    imageUrl: "/certificates/codesoft-internship.jpg",
+    isVerified: true,
+    priority: 12
   }
 ];
 
