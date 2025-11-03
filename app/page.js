@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Designations from "./components/homepage/designations";
+
 
 // Dynamically import components (ssr: false) to avoid "document is not defined" errors
 const HeroSection = dynamic(() => import("./components/homepage/hero-section"), { ssr: false });
@@ -13,6 +13,7 @@ const Projects = dynamic(() => import("./components/homepage/projects"), { ssr: 
 
 const Education = dynamic(() => import("./components/homepage/education"), { ssr: false });
 const Certifications = dynamic(() => import("./components/homepage/certifications"), { ssr: false });
+const Designations = dynamic(() => import("./components/homepage/designations"), { ssr: false });
 const Goals = dynamic(() => import("./components/homepage/goals"), { ssr: false });
 const ContactSection = dynamic(() => import("./components/homepage/contact"), { ssr: false });
 

@@ -25,9 +25,11 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     // Update localStorage and document class when theme changes
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', isDark);
-    document.documentElement.classList.toggle('light', !isDark);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', isDark);
+      document.documentElement.classList.toggle('light', !isDark);
+    }
   }, [isDark]);
 
   const toggleTheme = () => {
