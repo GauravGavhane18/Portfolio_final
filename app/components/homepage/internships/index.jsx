@@ -73,7 +73,7 @@ function Internships() {
                           <p className="text-xs sm:text-sm text-gray-300 mb-3">
                             {internship.description}
                           </p>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-2 mb-3">
                             {internship.skills.map((skill, index) => (
                               <span
                                 key={index}
@@ -83,6 +83,47 @@ function Internships() {
                               </span>
                             ))}
                           </div>
+                          
+                          {/* Certificate Section for Deloitte and CodeSoft */}
+                          {(internship.company === "Deloitte (Forage)" || internship.company === "CodeSoft") && (
+                            <div className="mt-4 p-3 bg-[#1a1443]/30 rounded-lg border border-[#16f2b3]/20">
+                              <div className="flex items-center justify-between mb-2">
+                                <h4 className="text-sm font-semibold text-[#16f2b3]">
+                                  📜 {internship.company} Certificate
+                                </h4>
+                                <div className="flex gap-2">
+                                  <button
+                                    onClick={() => {
+                                      const certFile = internship.company === "Deloitte (Forage)" 
+                                        ? "/deloitte.pdf" 
+                                        : "/codesoft.jpg";
+                                      window.open(certFile, '_blank');
+                                    }}
+                                    className="text-xs bg-[#16f2b3] text-[#1a1443] px-2 py-1 rounded hover:bg-[#14d4a0] transition-colors"
+                                  >
+                                    View
+                                  </button>
+                                  <button
+                                    onClick={() => {
+                                      const certFile = internship.company === "Deloitte (Forage)" 
+                                        ? "/deloitte.pdf" 
+                                        : "/codesoft.jpg";
+                                      const link = document.createElement('a');
+                                      link.href = certFile;
+                                      link.download = `${internship.company.replace(/\s+/g, '_')}_Certificate`;
+                                      link.click();
+                                    }}
+                                    className="text-xs bg-gradient-to-r from-pink-500 to-violet-600 text-white px-2 py-1 rounded hover:from-pink-600 hover:to-violet-700 transition-colors"
+                                  >
+                                    Download
+                                  </button>
+                                </div>
+                              </div>
+                              <p className="text-xs text-gray-300">
+                                Certificate of completion for {internship.title.toLowerCase()} program
+                              </p>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
