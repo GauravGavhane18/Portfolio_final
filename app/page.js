@@ -22,11 +22,11 @@ export default function Home() {
     <div suppressHydrationWarning>
       <HeroSection />
       <AboutSection />
+      <Education />
       <Internships />
       <Extracurricular />
       <Skills />
       <Projects />
-      <Education />
       <Designations />
       <Certifications />
       <Goals />
