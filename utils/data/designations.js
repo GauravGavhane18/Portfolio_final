@@ -9,6 +9,7 @@ export const designations = [
     skills: ["Leadership", "Event Management", "Technical Training", "Team Coordination"],
     category: "Leadership"
   },
+  
   {
     id: 2,
     title: "TPC Coordinator",
