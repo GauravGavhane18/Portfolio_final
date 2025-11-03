@@ -1,12 +1,40 @@
+"use client";
 // @flow strict
 import { certifications } from "@/utils/data/certifications";
 import Image from "next/image";
-import { BsAward } from "react-icons/bs";
+import { BsAward, BsEye, BsDownload, BsLinkedin } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/education.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Certifications() {
+  const handleViewCertificate = (certificateFile, title) => {
+    console.log('View clicked:', certificateFile);
+    if (certificateFile) {
+      window.open(certificateFile, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const handleDownloadCertificate = (certificateFile, title) => {
+    console.log('Download clicked:', certificateFile);
+    if (certificateFile) {
+      const link = document.createElement('a');
+      link.href = certificateFile;
+      link.download = `${title.replace(/\s+/g, '_')}_Certificate`;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
+  const handleLinkedInClick = (linkedinUrl) => {
+    console.log('LinkedIn clicked:', linkedinUrl);
+    if (linkedinUrl) {
+      window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div id="certifications" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
@@ -45,12 +73,7 @@ function Certifications() {
               {
                 certifications.map(certification => (
                   <GlowCard key={certification.id} identifier={`certification-${certification.id}`}>
-                    <a
-                      href={certification.credentialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-3 relative text-white hover:bg-[#1a1443]/20 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
-                    >
+                    <div className="p-3 relative text-white hover:bg-[#1a1443]/20 hover:scale-[1.02] transition-all duration-300 group">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -85,13 +108,67 @@ function Certifications() {
                               </span>
                             ))}
                           </div>
-                          <div className="flex items-center text-[#16f2b3] text-sm group-hover:text-white transition-colors duration-300">
-                            <span>View Certificate</span>
-                            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          <div className="flex gap-2 mt-4 relative z-10 flex-wrap">
+                            {certification.linkedinUrl && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  handleLinkedInClick(certification.linkedinUrl);
+                                }}
+                                className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 cursor-pointer z-20"
+                              >
+                                <BsLinkedin size={16} />
+                                LinkedIn
+                              </button>
+                            )}
+                            {certification.certificateFile && (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleViewCertificate(certification.certificateFile, certification.title);
+                                  }}
+                                  className="flex items-center gap-2 px-3 py-2 bg-[#16f2b3] text-black text-sm font-medium rounded-md hover:bg-[#16f2b3]/80 transition-colors duration-300 cursor-pointer z-20"
+                                >
+                                  <BsEye size={16} />
+                                  View
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    handleDownloadCertificate(certification.certificateFile, certification.title);
+                                  }}
+                                  className="flex items-center gap-2 px-3 py-2 bg-violet-500 text-white text-sm font-medium rounded-md hover:bg-violet-600 transition-colors duration-300 cursor-pointer z-20"
+                                >
+                                  <BsDownload size={16} />
+                                  Download
+                                </button>
+                              </>
+                            )}
+                            {!certification.certificateFile && !certification.linkedinUrl && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  handleViewCertificate(certification.credentialUrl, certification.title);
+                                }}
+                                className="flex items-center gap-2 px-3 py-2 bg-[#16f2b3] text-black text-sm font-medium rounded-md hover:bg-[#16f2b3]/80 transition-colors duration-300 cursor-pointer z-20"
+                              >
+                                <BsEye size={16} />
+                                View Certificate
+                              </button>
+                            )}
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </div>
                   </GlowCard>
                 ))
               }

@@ -1,12 +1,25 @@
+"use client";
 // @flow strict
 import { internships } from "@/utils/data/internships";
 import Image from "next/image";
-import { BsBriefcase } from "react-icons/bs";
+import { BsBriefcase, BsLinkedin, BsAward } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Internships() {
+  const handleLinkedInClick = (linkedinUrl) => {
+    if (linkedinUrl) {
+      window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const handleCertificateClick = (certificateUrl) => {
+    if (certificateUrl) {
+      window.open(certificateUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div id="internships" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
@@ -73,7 +86,7 @@ function Internships() {
                           <p className="text-xs sm:text-sm text-gray-300 mb-3">
                             {internship.description}
                           </p>
-                          <div className="flex flex-wrap gap-2 mb-3">
+                          <div className="flex flex-wrap gap-2 mb-4">
                             {internship.skills.map((skill, index) => (
                               <span
                                 key={index}
@@ -83,47 +96,34 @@ function Internships() {
                               </span>
                             ))}
                           </div>
-                          
-                          {/* Certificate Section for Deloitte and CodeSoft */}
-                          {(internship.company === "Deloitte (Forage)" || internship.company === "CodeSoft") && (
-                            <div className="mt-4 p-3 bg-[#1a1443]/30 rounded-lg border border-[#16f2b3]/20">
-                              <div className="flex items-center justify-between mb-2">
-                                <h4 className="text-sm font-semibold text-[#16f2b3]">
-                                  📜 {internship.company} Certificate
-                                </h4>
-                                <div className="flex gap-2">
-                                  <button
-                                    onClick={() => {
-                                      const certFile = internship.company === "Deloitte (Forage)" 
-                                        ? "/deloitte.pdf" 
-                                        : "/codesoft.jpg";
-                                      window.open(certFile, '_blank');
-                                    }}
-                                    className="text-xs bg-[#16f2b3] text-[#1a1443] px-2 py-1 rounded hover:bg-[#14d4a0] transition-colors"
-                                  >
-                                    View
-                                  </button>
-                                  <button
-                                    onClick={() => {
-                                      const certFile = internship.company === "Deloitte (Forage)" 
-                                        ? "/deloitte.pdf" 
-                                        : "/codesoft.jpg";
-                                      const link = document.createElement('a');
-                                      link.href = certFile;
-                                      link.download = `${internship.company.replace(/\s+/g, '_')}_Certificate`;
-                                      link.click();
-                                    }}
-                                    className="text-xs bg-gradient-to-r from-pink-500 to-violet-600 text-white px-2 py-1 rounded hover:from-pink-600 hover:to-violet-700 transition-colors"
-                                  >
-                                    Download
-                                  </button>
-                                </div>
-                              </div>
-                              <p className="text-xs text-gray-300">
-                                Certificate of completion for {internship.title.toLowerCase()} program
-                              </p>
-                            </div>
-                          )}
+                          <div className="flex gap-3 mt-4">
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                handleLinkedInClick(internship.linkedinUrl);
+                              }}
+                              className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300 cursor-pointer z-20"
+                            >
+                              <BsLinkedin size={16} />
+                              LinkedIn
+                            </button>
+                            {internship.certificateUrl && (
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  handleCertificateClick(internship.certificateUrl);
+                                }}
+                                className="flex items-center gap-2 px-3 py-2 bg-[#16f2b3] text-black text-sm font-medium rounded-md hover:bg-[#16f2b3]/80 transition-colors duration-300 cursor-pointer z-20"
+                              >
+                                <BsAward size={16} />
+                                Certificate
+                              </button>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
